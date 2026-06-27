@@ -1,7 +1,7 @@
 'use client';
 import Link from "next/link";
 import { ctaDetails } from "@/data/cta";
-import { useLanguage } from "@/context/LanguageContext";
+import { useLanguage } from '@/i18n/LanguageContext';
 import { translations } from "@/data/translations";
 
 const CTA: React.FC = () => {
