@@ -1,9 +1,9 @@
 export const siteDetails = {
-    siteName: 'Finwise',
-    siteUrl: 'https://finwise-omega.vercel.app/',
+    siteName: 'Salon Profit',
+    siteUrl: 'https://salon-profit.vercel.app/',
     metadata: {
-        title: 'Finwise - Next.js and Tailwind CSS Landing Page Template',
-        description: 'Finwise empowers businesses with cutting-edge technology solutions to drive success and efficiency.',
+        title: 'Salon Profit - Know the true cost of every service you offer',
+        description: 'Salon Profit helps hair and beauty salons calculate the real cost of every service. Track overheads, price your cosmetics, and set profitable service prices in seconds.',
     },
     language: 'en-us',
     locale: 'en-US',

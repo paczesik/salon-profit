@@ -3,23 +3,23 @@ import { siteDetails } from "./siteDetails";
 
 export const faqs: IFAQ[] = [
     {
-        question: `Is ${siteDetails.siteName} secure?`,
-        answer: 'Absolutely. We use bank-level encryption to protect your data and never store your login information. Plus, our biometric authentication adds an extra layer of security.',
+        question: `Is ${siteDetails.siteName} really free?`,
+        answer: `Yes. The service cost calculator is completely free to use, forever. If you want to manage your full salon, set overheads, and save your cosmetics catalog, you can unlock Pro with a single one-time payment.`,
     },
     {
-        question: `Can I use ${siteDetails.siteName} on multiple devices?`,
-        answer: 'Absolutely! Your Finwise account syncs seamlessly across all your devices - smartphone, tablet, and computer.',
+        question: 'What is the difference between Free and Pro?',
+        answer: 'The free version gives you the calculator so you can quickly add products and see what a service costs. Pro adds everything else: salon-wide costs like rent and energy, a saved cosmetics price list, service templates, and tools to manage your business profitably.',
     },
     {
-        question: 'Can I connect all my bank accounts?',
-        answer: `Yes! ${siteDetails.siteName} supports connections with over 10,000 financial institutions worldwide. Simply log in through our secure portal to link your accounts.`
+        question: 'Is Pro a subscription?',
+        answer: `No. ${siteDetails.siteName} Pro is a one-time payment that unlocks the full experience for good. There are no monthly fees and no recurring charges.`
     },
     {
-        question: 'Do I need any financial expertise to use the investing features?',
-        answer: 'Not at all! Our expert-curated portfolios and educational resources make investing accessible to everyone, regardless of experience level.',
+        question: 'What kind of salons is it for?',
+        answer: 'Salon Profit works for hair salons, nail studios, barbershops, beauty and aesthetics clinics, and any business that provides treatments using cosmetics and consumable products.',
     },
     {
-        question: 'What if I need help using the app?',
-        answer: 'Our dedicated support team is available 24/7 via chat or email. Plus, we offer extensive in-app tutorials and a comprehensive knowledge base to help you make the most of Finwise.'
+        question: 'How does the calculator work?',
+        answer: 'You add the cosmetics and products used for a treatment, enter how much of each is used, and Salon Profit instantly totals the product cost. With Pro, your overheads and labor are factored in too, so you can confidently set a price that stays profitable.'
     }
 ];
