@@ -4,7 +4,7 @@ import { Be_Vietnam_Pro } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { siteDetails } from '@/data/siteDetails';
-import { LanguageProvider } from '@/context/LanguageContext';
+import { LanguageProvider } from '@/i18n/LanguageContext';
 import LanguageToggle from '@/components/LanguageToggle';
 import "./globals.css";
 
