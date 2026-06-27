@@ -5,7 +5,7 @@ import { PiScissorsFill } from 'react-icons/pi';
 import { siteDetails } from '@/data/siteDetails';
 import { footerDetails } from '@/data/footer';
 import { getPlatformIconByName } from '@/utils';
-import { useLanguage } from '@/context/LanguageContext';
+import { useLanguage } from '@/i18n/LanguageContext';
 import { translations } from '@/data/translations';
 
 const Footer: React.FC = () => {
