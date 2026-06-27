@@ -1,7 +1,6 @@
-import { ctaDetails } from "@/data/cta"
+import Link from "next/link"
 
-import AppStoreButton from "./AppStoreButton"
-import PlayStoreButton from "./PlayStoreButton"
+import { ctaDetails } from "@/data/cta"
 
 const CTA: React.FC = () => {
     return (
@@ -17,9 +16,19 @@ const CTA: React.FC = () => {
 
                         <p className="mx-auto max-w-xl md:px-5">{ctaDetails.subheading}</p>
 
-                        <div className="mt-4 flex flex-col sm:flex-row items-center sm:gap-4">
-                        <AppStoreButton />
-                        <PlayStoreButton />
+                        <div className="mt-6 flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+                            <Link
+                                href="#pricing"
+                                className="flex items-center justify-center min-w-[205px] px-8 h-14 rounded-full text-white bg-primary hover:bg-primary-accent transition-colors font-medium"
+                            >
+                                Get Pro
+                            </Link>
+                            <Link
+                                href="#pricing"
+                                className="flex items-center justify-center min-w-[205px] px-8 h-14 rounded-full text-foreground bg-white hover:bg-pink-50 transition-colors font-medium"
+                            >
+                                Use the free calculator
+                            </Link>
                         </div>
                     </div>
                 </div>

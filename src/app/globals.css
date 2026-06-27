@@ -4,13 +4,15 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-  --primary: #FED835;
-  --secondary: #304fff;
+  --foreground: #1a0f17;
+  --primary: #F603A3;
+  --secondary: #F603A3;
 
-  --primary-accent: #e5c230;
-  --foreground-accent: #454545;
-  --hero-background: #F3F3F5;
+  --primary-accent: #d10089;
+  --accent-pink: #FF8AD8;
+  --accent-green: #03F656;
+  --foreground-accent: #6b5560;
+  --hero-background: #fdf2f9;
 }
 
 html {
@@ -22,7 +24,7 @@ body {
   
   color: var(--foreground);
   background: var(--background);
-  font-family: "Source Sans 3", sans-serif;
+  font-family: var(--font-be-vietnam-pro), sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
@@ -34,13 +36,13 @@ body {
 }
 
 .manrope {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-be-vietnam-pro), sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-be-vietnam-pro), sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }

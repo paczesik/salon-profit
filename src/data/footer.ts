@@ -7,7 +7,7 @@ export const footerDetails: {
     telephone: string;
     socials: ISocials;
 } = {
-    subheading: "Empowering businesses with cutting-edge financial technology solutions.",
+    subheading: "Helping hair and beauty salons understand their costs and price every service for profit.",
     quickLinks: [
         {
             text: "Features",
@@ -22,16 +22,12 @@ export const footerDetails: {
             url: "#testimonials"
         }
     ],
-    email: 'address@yoursite.com',
+    email: 'hello@salonprofit.app',
     telephone: '+1 (123) 456-7890',
     socials: {
-        // github: 'https://github.com',
-        // x: 'https://twitter.com/x',
         twitter: 'https://twitter.com/Twitter',
         facebook: 'https://facebook.com',
-        // youtube: 'https://youtube.com',
         linkedin: 'https://www.linkedin.com',
-        // threads: 'https://www.threads.net',
         instagram: 'https://www.instagram.com',
     }
 }

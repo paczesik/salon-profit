@@ -2,36 +2,25 @@ import { IPricing } from "@/types";
 
 export const tiers: IPricing[] = [
     {
-        name: 'Starter',
-        price: 29,
+        name: 'Free',
+        price: 0,
         features: [
-            'Basic cloud integration',
-            'Up to 5 team members',
-            '20GB storage',
-            'Email support',
+            'The full service cost calculator',
+            'Add unlimited products to a treatment',
+            'Instant product cost breakdown',
+            'Compare cost against your price',
         ],
     },
     {
         name: 'Pro',
-        price: 99,
+        price: 49,
         features: [
-            'Advanced cloud integration',
-            'Up to 20 team members',
-            '100GB storage',
-            'Priority email & phone support',
-            'Advanced analytics',
-        ],
-    },
-    {
-        name: 'Enterprise',
-        price: 'Custom',
-        features: [
-            'Full cloud integration',
-            'Unlimited team members',
-            'Unlimited storage',
-            '24/7 dedicated support',
-            'Custom solutions',
-            'On-site training',
+            'Everything in Free',
+            'Salon-wide costs: rent, energy & overheads',
+            'Saved cosmetics price list with cost-per-use',
+            'Reusable service library',
+            'Full business management tools',
+            'One-time payment, no subscription',
         ],
     },
 ]

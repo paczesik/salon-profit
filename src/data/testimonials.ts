@@ -3,21 +3,21 @@ import { siteDetails } from "./siteDetails";
 
 export const testimonials: ITestimonial[] = [
     {
-        name: 'John Smith',
-        role: 'CEO at Company',
-        message: `${siteDetails.siteName}'s AI-driven insights have transformed how we approach financial planning for our clients. It's an invaluable resource in the modern financial landscape.`,
+        name: 'Maria Kowalski',
+        role: 'Owner, Luxe Hair Studio',
+        message: `${siteDetails.siteName} showed me that my most popular color service was barely breaking even. I adjusted my prices in minutes and my margins have never been healthier.`,
         avatar: '/images/testimonial-1.webp',
     },
     {
-        name: 'Jane Doe',
-        role: 'CTO at Startup',
-        message: `As a CTO, I'm impressed by ${siteDetails.siteName}'s robust security measures and seamless integrations. It's rare to find an app that balances user-friendliness with such advanced technology.`,
+        name: 'Sophie Bennett',
+        role: 'Founder, Glow Beauty Bar',
+        message: `I used to guess my prices. Now I add the products into the calculator and know exactly what every treatment costs me. It completely changed how I run my salon.`,
         avatar: '/images/testimonial-2.webp',
     },
     {
-        name: 'Emily Johnson',
-        role: 'Product Manager',
-        message: `${siteDetails.siteName} is revolutionizing personal finance management. Its intuitive design and powerful features make it an indispensable tool for anyone serious about financial growth.`,
+        name: 'Daniel Reyes',
+        role: 'Master Barber, The Cut Co.',
+        message: `The free calculator alone is brilliant, but Pro is what made the difference. Tracking rent, energy and cosmetics in one place finally gave me a clear picture of my profit.`,
         avatar: '/images/testimonial-3.webp',
     },
 ];

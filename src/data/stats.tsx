@@ -1,22 +1,23 @@
-import { BsBarChartFill, BsFillStarFill } from "react-icons/bs";
-import { PiGlobeFill } from "react-icons/pi";
+import { BsFillStarFill } from "react-icons/bs";
+import { PiScissorsFill } from "react-icons/pi";
+import { TbPigMoney } from "react-icons/tb";
 
 import { IStats } from "@/types";
 
 export const stats: IStats[] = [
     {
-        title: "20M+",
-        icon: <BsBarChartFill size={34} className="text-blue-500" />,
-        description: "Transactions processed securely every day, providing real-time insights."
+        title: "30%",
+        icon: <TbPigMoney size={34} className="text-primary" />,
+        description: "Average margin uplift salons find after pricing services with their real costs."
     },
     {
         title: "5.0",
-        icon: <BsFillStarFill size={34} className="text-yellow-500" />,
-        description: "Star rating, consistently maintained across app stores."
+        icon: <BsFillStarFill size={34} className="text-primary" />,
+        description: "Star rating from salon owners who switched from guesswork to Salon Profit."
     },
     {
-        title: "200+ ",
-        icon: <PiGlobeFill size={34} className="text-green-600" />,
-        description: "Financial Institutions, seamlessly integrated, so you can manage all accounts."
+        title: "60s",
+        icon: <PiScissorsFill size={34} className="text-primary" />,
+        description: "All it takes to add your products and calculate the true cost of a treatment."
     }
 ];
