@@ -1,27 +1,28 @@
 'use client';
-
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import { HiOutlineXMark, HiBars3 } from 'react-icons/hi2';
 import { PiScissorsFill } from 'react-icons/pi';
-
 import Container from './Container';
 import { siteDetails } from '@/data/siteDetails';
-import { menuItems } from '@/data/menuItems';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const { language, setLanguage, t } = useLanguage();
+    const toggleMenu = () => setIsOpen(!isOpen);
 
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
+    const navLinks = [
+        { text: t.nav.features, url: '#features' },
+        { text: t.nav.pricing, url: '#pricing' },
+        { text: t.nav.testimonials, url: '#testimonials' },
+    ];
 
     return (
         <header className="bg-transparent fixed top-0 left-0 right-0 md:absolute z-50 mx-auto w-full">
             <Container className="!px-0">
                 <nav className="shadow-md md:shadow-none bg-white md:bg-transparent mx-auto flex justify-between items-center py-2 px-5 md:py-10">
-                    {/* Logo */}
                     <Link href="/" className="flex items-center gap-2">
                         <PiScissorsFill className="text-primary min-w-fit w-7 h-7" />
                         <span className="manrope text-xl font-semibold text-foreground cursor-pointer">
@@ -30,8 +31,8 @@ const Header: React.FC = () => {
                     </Link>
 
                     {/* Desktop Menu */}
-                    <ul className="hidden md:flex space-x-6">
-                        {menuItems.map(item => (
+                    <ul className="hidden md:flex space-x-6 items-center">
+                        {navLinks.map(item => (
                             <li key={item.text}>
                                 <Link href={item.url} className="text-foreground hover:text-foreground-accent transition-colors">
                                     {item.text}
@@ -40,13 +41,45 @@ const Header: React.FC = () => {
                         ))}
                         <li>
                             <Link href="#pricing" className="text-white bg-primary hover:bg-primary-accent px-8 py-3 rounded-full transition-colors">
-                                Try it free
+                                {t.nav.tryFree}
                             </Link>
+                        </li>
+                        <li>
+                            <div className="flex items-center gap-1 text-sm font-semibold bg-white border border-gray-200 rounded-full px-3 py-1.5 shadow-sm">
+                                <button
+                                    onClick={() => setLanguage('pl')}
+                                    className={`px-1 py-0.5 transition-colors ${language === 'pl' ? 'text-primary' : 'text-foreground-accent hover:text-foreground'}`}
+                                >
+                                    PL
+                                </button>
+                                <span className="text-gray-300">|</span>
+                                <button
+                                    onClick={() => setLanguage('en')}
+                                    className={`px-1 py-0.5 transition-colors ${language === 'en' ? 'text-primary' : 'text-foreground-accent hover:text-foreground'}`}
+                                >
+                                    EN
+                                </button>
+                            </div>
                         </li>
                     </ul>
 
-                    {/* Mobile Menu Button */}
-                    <div className="md:hidden flex items-center">
+                    {/* Mobile: language toggle + hamburger */}
+                    <div className="md:hidden flex items-center gap-3">
+                        <div className="flex items-center gap-1 text-sm font-semibold bg-white border border-gray-200 rounded-full px-3 py-1.5 shadow-sm">
+                            <button
+                                onClick={() => setLanguage('pl')}
+                                className={`px-1 py-0.5 transition-colors ${language === 'pl' ? 'text-primary' : 'text-foreground-accent hover:text-foreground'}`}
+                            >
+                                PL
+                            </button>
+                            <span className="text-gray-300">|</span>
+                            <button
+                                onClick={() => setLanguage('en')}
+                                className={`px-1 py-0.5 transition-colors ${language === 'en' ? 'text-primary' : 'text-foreground-accent hover:text-foreground'}`}
+                            >
+                                EN
+                            </button>
+                        </div>
                         <button
                             onClick={toggleMenu}
                             type="button"
@@ -65,7 +98,6 @@ const Header: React.FC = () => {
                 </nav>
             </Container>
 
-            {/* Mobile Menu with Transition */}
             <Transition
                 show={isOpen}
                 enter="transition ease-out duration-200 transform"
@@ -77,7 +109,7 @@ const Header: React.FC = () => {
             >
                 <div id="mobile-menu" className="md:hidden bg-white shadow-lg">
                     <ul className="flex flex-col space-y-4 pt-1 pb-6 px-6">
-                        {menuItems.map(item => (
+                        {navLinks.map(item => (
                             <li key={item.text}>
                                 <Link href={item.url} className="text-foreground hover:text-primary block" onClick={toggleMenu}>
                                     {item.text}
@@ -86,7 +118,7 @@ const Header: React.FC = () => {
                         ))}
                         <li>
                             <Link href="#pricing" className="text-white bg-primary hover:bg-primary-accent px-5 py-2 rounded-full block w-fit" onClick={toggleMenu}>
-                                Try it free
+                                {t.nav.tryFree}
                             </Link>
                         </li>
                     </ul>
