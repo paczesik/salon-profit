@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { heroDetails } from '@/data/hero';
-import { useLanguage } from '@/context/LanguageContext';
+import { useLanguage } from '@/i18n/LanguageContext';
 import { translations } from '@/data/translations';
 
 const Hero: React.FC = () => {
