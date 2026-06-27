@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { siteDetails } from '@/data/siteDetails';
 import { LanguageProvider } from '@/i18n/LanguageContext';
-import LanguageToggle from '@/components/LanguageToggle';
 import "./globals.css";
 
 const beVietnamPro = Be_Vietnam_Pro({
@@ -38,7 +37,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className={`${beVietnamPro.className} antialiased`}>
         {siteDetails.googleAnalyticsId && <GoogleAnalytics gaId={siteDetails.googleAnalyticsId} />}
         <LanguageProvider>
-          <LanguageToggle />
           <Header />
           <main>{children}</main>
           <Footer />
