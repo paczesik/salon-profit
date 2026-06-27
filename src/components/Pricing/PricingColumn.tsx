@@ -1,7 +1,7 @@
 'use client';
 import clsx from "clsx";
 import { BsFillCheckCircleFill } from "react-icons/bs";
-import { useLanguage } from '@/context/LanguageContext';
+import { useLanguage } from '@/i18n/LanguageContext';
 import { translations } from '@/data/translations';
 
 interface Props {
