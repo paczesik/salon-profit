@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Be_Vietnam_Pro } from "next/font/google";
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { siteDetails } from '@/data/siteDetails';
-
+import { LanguageProvider } from '@/context/LanguageContext';
+import LanguageToggle from '@/components/LanguageToggle';
 import "./globals.css";
 
 const beVietnamPro = Be_Vietnam_Pro({
@@ -22,14 +22,7 @@ export const metadata: Metadata = {
     description: siteDetails.metadata.description,
     url: siteDetails.siteUrl,
     type: 'website',
-    images: [
-      {
-        url: '/images/og-image.jpg',
-        width: 1200,
-        height: 675,
-        alt: siteDetails.siteName,
-      },
-    ],
+    images: [{ url: '/images/og-image.jpg', width: 1200, height: 675, alt: siteDetails.siteName }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -39,22 +32,17 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${beVietnamPro.variable} bg-background`}>
-      <body
-        className={`${beVietnamPro.className} antialiased`}
-      >
+      <body className={`${beVietnamPro.className} antialiased`}>
         {siteDetails.googleAnalyticsId && <GoogleAnalytics gaId={siteDetails.googleAnalyticsId} />}
-        <Header />
-        <main>
-          {children}
-        </main>
-        <Footer />
+        <LanguageProvider>
+          <LanguageToggle />
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );
