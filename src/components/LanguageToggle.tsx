@@ -1,5 +1,5 @@
 'use client';
-import { useLanguage } from '@/context/LanguageContext';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 const LanguageToggle: React.FC = () => {
   const { language, setLanguage } = useLanguage();
