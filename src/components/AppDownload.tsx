@@ -23,7 +23,7 @@ const AppDownload: React.FC = () => {
             </p>
             <div className="mt-6 flex flex-col sm:flex-row items-center gap-3">
                 
-                    href={ctaDetails.appStoreUrl}
+                   <a href={ctaDetails.appStoreUrl}
                     className="flex items-center justify-center gap-2 min-w-[180px] px-6 h-12 rounded-full bg-black text-white hover:bg-gray-800 transition-colors font-medium text-sm"
                 >
                     <svg viewBox="0 0 24 24" className="w-5 h-5 fill-white" xmlns="http://www.w3.org/2000/svg">
@@ -35,7 +35,7 @@ const AppDownload: React.FC = () => {
                     </span>
                 </a>
                 
-                    href={ctaDetails.googlePlayUrl}
+                    <a href={ctaDetails.googlePlayUrl}
                     className="flex items-center justify-center gap-2 min-w-[180px] px-6 h-12 rounded-full bg-black text-white hover:bg-gray-800 transition-colors font-medium text-sm"
                 >
                     <svg viewBox="0 0 24 24" className="w-5 h-5 fill-white" xmlns="http://www.w3.org/2000/svg">
